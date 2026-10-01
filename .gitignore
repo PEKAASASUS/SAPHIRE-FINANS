@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Dados gerados em tempo de execução (não versionar no git — ficam só no pendrive)
+data/safira.db
+data/logs/
+
+# Configuração local gerada em runtime
+config/app_config.json
+
+# PyInstaller
+*.spec
+*.exe
+*.app
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

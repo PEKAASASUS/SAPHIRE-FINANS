@@ -1,0 +1,9 @@
+# SAFIRA — dependências mínimas (Etapa 1)
+#
+# Mantidas deliberadamente poucas para preservar o requisito de
+# portabilidade e baixo consumo de recursos. sqlite3, hashlib, logging
+# e tkinter fazem parte da biblioteca padrão do Python e não aparecem
+# aqui.
+
+customtkinter>=5.2.2,<6.0.0   # interface gráfica desktop (baseada em Tkinter)
+cryptography>=42.0.0          # PBKDF2-HMAC-SHA256 e infraestrutura de criptografia
