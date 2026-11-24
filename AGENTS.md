@@ -1,0 +1,23 @@
+# SAFIRA 3.1.0 - instruções permanentes
+
+- Trabalhar exclusivamente nesta versão. SF-V3.0.0 e SF-V2 são referências somente leitura.
+- Foco desta release: apresentação. Não modificar motor, contratos ou esquema para facilitar UI.
+- Conferir docs/FINANCIAL_ENGINE_BASELINE.json e executar os testes antes de afirmar preservação funcional.
+- Ler docs/SAFIRA_DESIGN_SYSTEM.md, UI_COMPONENTS.md e MOTION_SYSTEM.md antes de editar componentes.
+- Tokens em safira/ui/tokens.py. Não espalhar cores literais nas telas; usar componentes compartilhados.
+- UI não executa SQL. Valores financeiros dos serviços, centavos int, formato por domain.brl/money.
+- Sem dados de demonstração em produção. QA exclusivamente com perfis sintéticos em .test-tmp.
+- Nunca usar senhas fornecidas pelo proprietário em arquivos, testes ou logs.
+- Motion: after cancelável por canal, sem sleep/thread por animação; sempre respeitar reduzir movimento.
+- Grade: manter virtualização, todos os registros, identidade estável, teclado e rolagem.
+- Instanciar widgets uma vez e atualizar seus dados quando possível; evitar reconstrução do dashboard.
+- Calendários, seletores e modais devem calcular limites em DPI real, distinguindo pixels e unidades CTk.
+- Persistência financeira continua LOCALAPPDATA/SAFIRA ou SAFIRA_DATA_DIR explícito. Não mover banco.
+- ui-preferences.json é apenas apresentação; não modifica schema nem entra no backup SQLite.
+- Não gerar logo automaticamente. Wordmark textual até receber decisão/asset oficial.
+- Python 3.12. Executar .venv/Scripts/python.exe; dependências em requirements-dev.txt.
+- scripts/test.ps1 para suíte; tests/ui_smoke.py e tests/ui_redesign_qa.py abrem UI descartável.
+- Teste de stress retém banco sintético para diagnóstico; não apagar bases do usuário ou testes existentes indiscriminadamente.
+- Build: scripts/build.ps1, cache build/3.1.0, saída dist/3.1.0/SAFIRA. Preservar builds antigos.
+- Atualizar docs/UI_QA_REPORT.md com evidência real. Não confundir escala de widget com mudança física do DPI/monitor.
+- Banco/backups não cifrados; senha Argon2id protege acesso pela interface, sem recuperação que contorne senha.

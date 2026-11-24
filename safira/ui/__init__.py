@@ -1,0 +1,1 @@
+"""SAFIRA desktop presentation."""

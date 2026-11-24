@@ -1,0 +1,10 @@
+[project]
+name = "safira-desktop"
+version = "3.1.0"
+requires-python = ">=3.12,<3.13"
+description = "Gestão financeira pessoal local e offline"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
+pythonpath = ["."]
